@@ -3,7 +3,7 @@
 #
 Name     : mozjs128
 Version  : 128.2.0
-Release  : 8
+Release  : 9
 URL      : https://archive.mozilla.org/pub/firefox/releases/128.2.0esr/source/firefox-128.2.0esr.source.tar.xz
 Source0  : https://archive.mozilla.org/pub/firefox/releases/128.2.0esr/source/firefox-128.2.0esr.source.tar.xz
 Group    : Development/Tools
