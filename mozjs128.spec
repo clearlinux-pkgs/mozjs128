@@ -3,7 +3,7 @@
 #
 Name     : mozjs128
 Version  : 128.2.0
-Release  : 7
+Release  : 8
 URL      : https://archive.mozilla.org/pub/firefox/releases/128.2.0esr/source/firefox-128.2.0esr.source.tar.xz
 Source0  : https://archive.mozilla.org/pub/firefox/releases/128.2.0esr/source/firefox-128.2.0esr.source.tar.xz
 Group    : Development/Tools
@@ -38,6 +38,10 @@ Patch2: copy-headers.patch
 Patch3: init_patch.patch
 Patch4: emitter.patch
 Patch5: spidermonkey_checks_disable.patch
+
+%define __strip /bin/true
+%define debug_package %{nil}
+
 
 %description
 JavaScript interpreter and libraries - Version 128
@@ -94,8 +98,8 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
 export SOURCE_DATE_EPOCH=1501084420
-export CFLAGS="-Os -falign-functions=4 -fno-semantic-interposition -fno-signed-zeros "
-export CXXFLAGS="-Os -falign-functions=4 -fno-semantic-interposition -fno-signed-zeros"
+export CFLAGS="-Os -falign-functions=4 -fno-semantic-interposition -fno-signed-zeros -g1"
+export CXXFLAGS="-Os -falign-functions=4 -fno-semantic-interposition -fno-signed-zeros -g1"
 export AUTOCONF="/usr/bin/autoconf213"
 CFLAGS+=' -fno-delete-null-pointer-checks -fno-strict-aliasing -fno-tree-vrp '
 CXXFLAGS+=' -fno-delete-null-pointer-checks -fno-strict-aliasing -fno-tree-vrp '
